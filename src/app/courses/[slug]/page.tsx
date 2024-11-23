@@ -13,9 +13,9 @@ interface Course {
   image: string
 }
 
-const CoursesPage = async ({params}:any) => {
+const CoursesPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const {slug} = await params;
-  const slugCourse = CourseData.courses.find((course)=>course.slug === `/courses/${slug}`);
+  const slugCourse = CourseData.courses.find((course:Course)=>course.slug === `/courses/${slug}`);
   console.log(slugCourse);
 
   if(!slugCourse){

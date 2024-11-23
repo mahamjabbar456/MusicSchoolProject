@@ -1,8 +1,8 @@
 'use client'
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { FormEvent, useState } from "react";
+import React, { FormEvent, useState } from "react";
 
-const contact = () => {
+const Contact = () => {
     const [email,setEmail] = useState<string>('');
     const [message,setMessage] = useState<string>("");
     
@@ -51,4 +51,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
